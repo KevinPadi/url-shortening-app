@@ -2,6 +2,7 @@ import Nav from './components/Nav'
 import HeroSection from './components/HeroSection'
 import FeaturesSection from './components/FeaturesSection'
 import CtaSection from './components/CtaSection'
+import FooterSection from './components/FooterSection'
 
 function App () {
   return (
@@ -10,6 +11,7 @@ function App () {
       <HeroSection />
       <FeaturesSection />
       <CtaSection />
+      <FooterSection />
     </div>
   )
 }
