@@ -1,6 +1,7 @@
 import Nav from './components/Nav'
 import HeroSection from './components/HeroSection'
 import FeaturesSection from './components/FeaturesSection'
+import CtaSection from './components/CtaSection'
 
 function App () {
   return (
@@ -8,6 +9,7 @@ function App () {
       <Nav />
       <HeroSection />
       <FeaturesSection />
+      <CtaSection />
     </div>
   )
 }

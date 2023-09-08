@@ -12,7 +12,9 @@ export default {
     backgroundImage: {
       hero: "url('./src/assets/images/illustration-working.svg')",
       shortenDeskBg: "url('./src/assets/images/bg-shorten-desktop.svg')",
-      shortenMobileBg: "url('./src/assets/images/bg-shorten-mobile.svg')"
+      shortenMobileBg: "url('./src/assets/images/bg-shorten-mobile.svg')",
+      boostDeskBg: "url('./src/assets/images/bg-boost-desktop.svg')",
+      boostMobileBg: "url('./src/assets/images/bg-boost-mobile.svg')"
     },
     extend: {
       colors: {
