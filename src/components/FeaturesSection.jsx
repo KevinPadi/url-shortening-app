@@ -6,7 +6,7 @@ import InputSection from './InputSection'
 function FeaturesSection () {
   return (
     <section className='relative mt-32 bg-gray-100 px-6 lg:px-20 xl:px-40 py-10 space-y-24'>
-      <div className='absolute -top-[7rem] md:-top-[5.5rem] lg:-top-[6.5rem] right-[0rem] w-full '>
+      <div className='relative -top-[9.5rem] md:-top-[8rem] lg:-top-[9rem] right-[0rem] w-full '>
         <InputSection />
       </div>
       <div className='text-center md:w-[400px] mx-auto pt-0 space-y-4'>
