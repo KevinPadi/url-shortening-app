@@ -6,12 +6,14 @@ import InputSection from './InputSection'
 function FeaturesSection () {
   return (
     <section className='relative mt-32 bg-gray-100 px-6 lg:px-20 xl:px-40 py-10 space-y-24'>
-      <div className='relative -top-[9.5rem] md:-top-[8rem] lg:-top-[9rem] right-[0rem] w-full '>
-        <InputSection />
-      </div>
-      <div className='text-center md:w-[400px] mx-auto pt-0 space-y-4'>
-        <h2 className='text-2xl md:text-3xl font-bold text-VeryDarkBlue'>Advanced Statistics</h2>
-        <p className='text-sm leading-relaxed text-GrayishViolet'>Track how your links are performing across the web with our advanced statistics dashboard</p>
+      <div className='-space-y-10'>
+        <div className='relative -top-[9.5rem] md:-top-[8rem] lg:-top-[9rem] right-[0rem] w-full '>
+          <InputSection />
+        </div>
+        <div className='text-center md:w-[400px] mx-auto space-y-4'>
+          <h2 className='text-2xl md:text-3xl font-bold text-VeryDarkBlue'>Advanced Statistics</h2>
+          <p className='text-sm leading-relaxed text-GrayishViolet'>Track how your links are performing across the web with our advanced statistics dashboard</p>
+        </div>
       </div>
       <div className='relative flex flex-col gap-20 md:gap-5 md:flex-row justify-between h-auto md:h-[300px] max-w-xs mx-auto md:max-w-none'>
         <div className='absolute top-0 md:-top-3 bottom-0 right-0 left-0 m-auto w-2 md:w-full h-full md:h-2 bg-Cyan' />
