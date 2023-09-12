@@ -18,7 +18,7 @@ function LinksItem ({ onDelete, links }) {
       <div className='px-3 pt-3 md:px-0 md:pt-0 flex flex-col md:flex-row text-center md:justify-between md:items-center gap-2 md:gap-5 w-full md:w-auto'>
         <p className='text-Cyan text-sm md:text-base lg:text-lg text-left'>{shortLink}</p>
         <button onClick={onClick} className='rounded-md bg-Red px-6 py-3 font-bold text-white hover:bg-Red/80 hover:transition-colors duration-100'>Delete</button>
-        <button onClick={copyToClipboard} className='rounded-md bg-Cyan px-6 py-3 font-bold text-white hover:bg-Cyan/80 hover:transition-colors duration-100'>Copy</button>
+        <button onClick={copyToClipboard} className='rounded-md bg-Cyan w-24 py-3 font-bold text-white hover:bg-Cyan/80 hover:transition-colors duration-100 focus:bg-DarkViolet before:content-["Copy"] focus:before:content-["Copied!"]' />
       </div>
     </div>
   )
