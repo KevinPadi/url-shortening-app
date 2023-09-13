@@ -39,7 +39,12 @@ function InputSection () {
       setIsSubmitted(true)
     } else {
       fetch(`https://api.shrtco.de/v2/shorten?url=${query}`)
-        .then((res) => res.json())
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`La solicitud falló con el código ${response.status}`)
+          }
+          return response.json()
+        })
         .then((data) => setData(data))
       setIsSubmitted(false)
     }
@@ -55,7 +60,6 @@ function InputSection () {
           {isSubmitted && query.trim() === '' && (
             <p className='text-Red text-xs block md:absolute italic md:top-[80px] lg:top-[100px]'>Please add a link</p>
           )}
-
         </div>
         <button type='submit' className='py-3 bg-Cyan text-white font-bold hover:bg-Cyan/80 hover:transition-colors duration-100 rounded-md w-full md:w-40'>Shorten It!</button>
       </form>
