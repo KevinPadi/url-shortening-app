@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/url-shortening-app-with-react-and-tailwind-css-2ef9zGJEww)
 - Live Site URL: [GitHub Pages](https://kevinpadi.github.io/url-shortening-app/)
 
 ## My process
