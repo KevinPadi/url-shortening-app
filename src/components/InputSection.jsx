@@ -8,11 +8,6 @@ function InputSection () {
   const [links, setLinks] = useState([])
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  // const handleClick = (e) => {
-  //   e.preventDefault()
-
-  // }
-
   const onDelete = (id) => {
     const newLinks = [...links]
     const link = newLinks.find((link) => link.id === id)
@@ -29,8 +24,6 @@ function InputSection () {
       console.log(newLinks)
     }
   }, [data])
-
-  // TODO: mirar chatgpt para seguir con lo del input, manejar error al mandar una url incorrecta a la api
 
   const handleSubmit = (e) => {
     e.preventDefault()
