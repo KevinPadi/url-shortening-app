@@ -20,7 +20,6 @@ function InputSection () {
     if (data) {
       const newData = data
       const newLinks = [...links, { shortLink: newData.tiny_url, originalLink: newData.url, id: uuidv4() }]      setLinks(newLinks)
-      console.log(newLinks)
     }
   }, [data])
   
@@ -55,7 +54,6 @@ function InputSection () {
           console.log(resultUrl.data, 'url')
         })
         .catch(error => {
-          console.error('Hubo un error al acortar la URL:', error)
         })
     }
   }
