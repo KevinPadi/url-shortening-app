@@ -19,11 +19,29 @@ function InputSection () {
   useEffect(() => {
     if (data) {
       const newData = data
-      const newLinks = [...links, { shortLink: newData.result.full_short_link, originalLink: newData.result.original_link, id: uuidv4() }]
-      setLinks(newLinks)
+      const newLinks = [...links, { shortLink: newData.tiny_url, originalLink: newData.url, id: uuidv4() }]      setLinks(newLinks)
       console.log(newLinks)
     }
   }, [data])
+  
+  const shortenUrl = async (url) => {
+    const apiUrl = 'https://api.tinyurl.com/create'
+    const apiKey = 'xxOlNvW6I3aJSqZ5ZSGyg4WUGuz23wIx9bkAGE28AM8a5S5Ex7nOLh4psC2x'
+    const requestData = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        api_token: apiKey,
+        url
+      })
+    }
+    const res = await fetch(apiUrl, requestData)
+    const data = await res.json()
+
+    return data
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -31,15 +49,14 @@ function InputSection () {
     if (query.trim() === '') {
       setIsSubmitted(true)
     } else {
-      fetch(`https://api.shrtco.de/v2/shorten?url=${query}`)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`La solicitud falló con el código ${response.status}`)
-          }
-          return response.json()
+      shortenUrl(query)
+        .then(resultUrl => {
+          setData(resultUrl.data)
+          console.log(resultUrl.data, 'url')
         })
-        .then((data) => setData(data))
-      setIsSubmitted(false)
+        .catch(error => {
+          console.error('Hubo un error al acortar la URL:', error)
+        })
     }
   }
 
