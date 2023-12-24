@@ -1,3 +1,4 @@
+import { MagicMotion } from 'react-magic-motion'
 import brandIcon from '../assets/images/icon-brand-recognition.svg'
 import detailedIcon from '../assets/images/icon-detailed-records.svg'
 import customizableIcon from '../assets/images/icon-fully-customizable.svg'
@@ -7,9 +8,11 @@ function FeaturesSection () {
   return (
     <section className='relative mt-32 bg-gray-100 px-6 lg:px-20 xl:px-40 py-10 space-y-24'>
       <div className='-space-y-10'>
-        <div className='relative -top-[9.5rem] md:-top-[8rem] lg:-top-[9rem] right-[0rem] w-full '>
-          <InputSection />
-        </div>
+        <MagicMotion>
+          <div className='relative -top-[9.5rem] md:-top-[8rem] lg:-top-[9rem] right-[0rem] w-full '>
+            <InputSection />
+          </div>
+        </MagicMotion>
         <div className='text-center md:w-[400px] mx-auto space-y-4'>
           <h2 className='text-2xl md:text-3xl font-bold text-VeryDarkBlue'>Advanced Statistics</h2>
           <p className='text-sm leading-relaxed text-GrayishViolet'>Track how your links are performing across the web with our advanced statistics dashboard</p>
