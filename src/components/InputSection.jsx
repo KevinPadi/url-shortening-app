@@ -19,7 +19,8 @@ function InputSection () {
   useEffect(() => {
     if (data) {
       const newData = data
-      const newLinks = [...links, { shortLink: newData.tiny_url, originalLink: newData.url, id: uuidv4() }]      setLinks(newLinks)
+      const newLinks = [...links, { shortLink: newData.tiny_url, originalLink: newData.url, id: uuidv4() }];      
+      setLinks(newLinks);
     }
   }, [data])
   
